@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 584761808}
   - component: {fileID: 584761814}
   - component: {fileID: 584761813}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -369,9 +369,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50178e778656bf4419555a77608a39ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.05
-  jump: 556
-  isJumping: 0
+  moveSpeed: 100
+  jumpSpeed: 15
+  maxSpeed: 10
+  debugState: 1
 --- !u!212 &584761811
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -447,14 +448,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584761807}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_UseAutoMass: 1
+  m_Mass: 1.184145
+  m_LinearDrag: 0.8
+  m_AngularDrag: 0
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -462,10 +463,10 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &584761814
 BoxCollider2D:
   m_ObjectHideFlags: 0
